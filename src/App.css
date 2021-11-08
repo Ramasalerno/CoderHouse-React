@@ -47,3 +47,11 @@ body {
     cursor: pointer;
 
 }
+
+.logo {
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
