@@ -1,13 +1,38 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container } from 'react-bootstrap'
-import { TarjetaProducto } from '../TarjetaProduct/TarjetaProducto'
-import dell from "../imagenes/laptop.png"
+import { pedirDatos } from '../helpers/pedirDatos'
+import { ItemList } from '../ItemList/ItemList'
 
-export const ItemListContainer = ( {greeting} ) => {
+
+
+export const ItemListContainer = () => {
+    const [loading, setLoading] = useState(false)
+    const [productos, setProductos] = useState([])
+    
+    useEffect(() => {
+        
+        setLoading(true)
+        pedirDatos()
+            .then( (resp) => {
+                    setProductos(resp)
+            })
+            .catch( (error) => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [])
+
     return (
         <Container>
-            <h2 className="text-center"> {greeting} </h2>
-            <TarjetaProducto img={dell} name="Laptop Dell"/>
+             <>
+            {
+                loading 
+                    ? <h2>Cargando...</h2> 
+                    : <ItemList items={productos}/>
+            }
+        </>
         </Container>
         
     )
