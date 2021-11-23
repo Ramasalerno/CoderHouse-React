@@ -1,6 +1,7 @@
 import React from 'react'
 import { Logo } from '../Logo/Logo'
 import { CartWidget } from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 export const NavBar = () => {
     return (
@@ -8,10 +9,9 @@ export const NavBar = () => {
             <header>
                          <nav className="menu">
                              <ul className="menu_items">
-                                <li><a href ="index.js">Inicio</a></li>
-                                <li><a href ="index.js">Galeria</a></li>
-                                <li><a href ="index.js">¿Quienes somos?</a></li>
-                                <li><a href ="index.js">Contacto</a></li>
+                                <li> <Link to ="/">Inicio</Link></li>
+                                <li><Link to ="/">¿Quienes somos?</Link></li>
+                                <li><Link to ="/">Contacto</Link></li>
                              <CartWidget/>
                              </ul>
                              <Logo/>
