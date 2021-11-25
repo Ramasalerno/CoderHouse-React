@@ -1,27 +1,21 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { ItemCount } from '../ItemCount/ItemCount'
+import './ItemDetailStyle.css'
 
-export const ItemDetail = ({id, name, img, desc, price, category}) => {
-
-    const navigate = useNavigate()
-
-    const handleVolver = () => {
-        navigate(-1)
-    }
-
-    const handleVolverInicio = () => {
-        navigate('/')
-    }
+export const ItemDetail = ({name, img, desc, price,stock}) => {
 
     return (
-        <div className="container">
-            <h2>{name}</h2>
-            <img src={img} alt={name}/>
-            <p>{desc}</p>
-            <p>Precio: ${price}</p>
+        <div className="box1 ">
+            <div>
+                <h2>{name}</h2>
+                <img src={img} alt={name}/>
+                <p>{desc}</p>
+                <span className="price">Precio: USD $ {price} + IVA</span>
+                <p>Stock actual: {stock} unidades</p>
+            </div>
+                <ItemCount stock={stock}/>
+                
 
-            <button className="btn btn-primary" onClick={handleVolver}>Volver</button>
-            <button className="btn btn-danger" onClick={handleVolverInicio}>Volver al inicio</button>
         </div>
     )
 }

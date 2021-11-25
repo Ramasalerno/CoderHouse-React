@@ -6,9 +6,10 @@ export const stock = [{
         id: 1,
         price: 1500,
         name: "DELL LATITUDE",
-        desc: "Laptop empresarial, procesador i5",
+        desc: "Laptop empresarial, procesador i5, disco ssd",
         img: `${dell}`,
-        category: "Laptop"
+        category: "Laptop",
+        stock: 15
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ export const stock = [{
         name: "Monitor ASUS",
         desc: "Display gamer, tasa de refresco 144hz",
         img: `${moni}`,
-        category: "Display"
+        category: "Display",
+        stock: 19
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const stock = [{
         name: "DELL INSPIRON",
         desc: "Laptop linea hogareña, procesador i3",
         img: `${dell}`,
-        category: "Laptop"
+        category: "Laptop",
+        stock: 56
     },
     {
         id: 4,
@@ -32,7 +35,8 @@ export const stock = [{
         name: "Pc Gamer",
         desc: "Procesador i9, 32gb de ram",
         img: `${pcGamer2}`,
-        category: "Pc Gamer"
+        category: "Pc Gamer",
+        stock: 5
     },
     {
         id: 5,
@@ -40,7 +44,8 @@ export const stock = [{
         name: "DELL G5",
         desc: "Laptop gamer",
         img: `${dell}`,
-        category: "Laptop"
+        category: "Laptop",
+        stock: 10
     },
     {
         id: 6,
@@ -48,7 +53,8 @@ export const stock = [{
         name: "DELL PRECISION",
         desc: "Laptop gamer",
         img: `${dell}`,
-        category: "Workstation"
+        category: "Workstation",
+        stock: 9
     },
     {
         id: 7,
@@ -56,7 +62,8 @@ export const stock = [{
         name: "Monitor ASUS",
         desc: "Display gamer",
         img: `${moni}`,
-        category: "Display"
+        category: "Display",
+        stock: 2
     },
     {
         id: 8,
@@ -64,6 +71,7 @@ export const stock = [{
         name: "DELL RUGGED",
         desc: "Laptop gamer",
         img: `${dell}`,
-        category: "Laptop"
+        category: "Laptop",
+        stock: 15
     }
 ]

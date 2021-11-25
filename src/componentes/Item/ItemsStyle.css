@@ -1,0 +1,13 @@
+.cuerpo {
+    background-color: rgba(61, 61, 61, 0.411);
+    width: 18rem;
+    border-radius: 5%;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.cuerpo h3 {
+    color: rgb(243, 112, 210);
+}

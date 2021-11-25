@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {Button} from "react-bootstrap"
 
-
 export const ItemCount = ({stock}) => {
     const [counter, setCounter] = useState (0);
 
@@ -31,7 +30,8 @@ export const ItemCount = ({stock}) => {
         <div>
             <h2>{counter}</h2>
             <div>
-            <Button variant="danger" onClick={reducir}>-</Button>
+            <h3>Cantidad a comprar</h3>
+            <Button variant="danger"  onClick={reducir}>-</Button>
             <Button variant="primary" onClick={aumentar}>+</Button>
             <hr/>
             <button type="button" class="btn btn-success" onClick={respuesta}>Agregar al carrito</button>

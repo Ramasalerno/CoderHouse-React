@@ -1,0 +1,33 @@
+.box1 {
+    background-color: rgba(61, 61, 61, 0.411);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 5%;
+}
+
+.box1 img {
+    width: 80%;
+}
+
+.box1 h2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+.box1 p {
+    color: white;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.price {
+    color: yellow;
+    font-size: 1.5em;
+}
+
+button {
+    margin: 10px;
+}

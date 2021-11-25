@@ -58,3 +58,9 @@ body {
 .logo img {
     height: 50px;
 }
+
+.title1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
