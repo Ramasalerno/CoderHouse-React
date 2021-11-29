@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { pedirDatos } from '../helpers/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
+
 export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState()
