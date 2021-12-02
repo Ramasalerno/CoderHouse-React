@@ -1,9 +1,7 @@
-import React from 'react'
 import { Navigate, useRoutes } from 'react-router'
 import { CartView } from '../componentes/CartView/CartView'
 import { ItemDetailContainer } from '../componentes/ItemDetailContainer/ItemDetailContainer'
 import { ItemListContainer } from '../componentes/ItemListContainer/ItemListContainer'
-
 
 export const AppRouter = () => {
 
