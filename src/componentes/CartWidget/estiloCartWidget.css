@@ -3,3 +3,13 @@
     color: white;
     margin-left: 30px;
 }
+
+.ocultar {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.numCount {
+    color: white;
+    font-size:20px;
+}

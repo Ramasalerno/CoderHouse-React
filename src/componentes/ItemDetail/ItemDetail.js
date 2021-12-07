@@ -29,6 +29,7 @@ const handleAgregar = () => {
                 <p>{desc}</p>
                 <span className="price">Precio: USD $ {price} + IVA</span>
                 <p>Stock actual: {stock} unidades</p>
+                <Link to="/" className="btn btn-danger my-4">Volver al inicio</Link>
             </div>
                 
                 {
@@ -41,8 +42,7 @@ const handleAgregar = () => {
                     onAdd={handleAgregar} />
                     :
                     <Link to="/cart" className="btn btn-success">Terminar compra</Link>
-                }
-                
+                }           
                 
 
         </div>
