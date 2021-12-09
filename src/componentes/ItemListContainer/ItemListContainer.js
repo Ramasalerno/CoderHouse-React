@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { Container } from 'react-bootstrap'
-import { pedirDatos } from '../helpers/pedirDatos'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
 import { Loader } from '../Loader/Loader'
-
+import { collection, getDocs, query, where } from 'firebase/firestore/lite'
+import { db } from '../firebase/config'
 
 export const ItemListContainer = () => {
     const [loading, setLoading] = useState(false)
@@ -15,20 +15,25 @@ export const ItemListContainer = () => {
     useEffect(() => {
         
         setLoading(true)
-        pedirDatos()
-            .then( (resp) => {
-                if (!catId) {
-                    setProductos(resp)
-                } else {
-                    setProductos(resp.filter(prod => prod.category === catId))
-                }
-            })
-            .catch( (error) => {
-                console.log(error)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
+        
+        //primero la ref al database, segundo el nombre de la conexion de la bd en firebase
+        const productosRef = collection (db, 'productos')
+
+        const q = catId ? query(productosRef, where('category', '==', catId)) : productosRef
+
+        getDocs (q)
+        .then ((collection)=> {
+            const items = collection.docs.map((doc) => ({
+                id:doc.id,
+                ...doc.data()
+            }))
+            console.log(items)
+            setProductos(items)
+        })
+        .finally(()=> {
+            setLoading(false)
+        })
+
     }, [catId])
 
     return (
