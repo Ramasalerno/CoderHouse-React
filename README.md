@@ -1,9 +1,9 @@
 # Coder House, React
 
-1. Proyecto "E-commerce, utilizando firebase como db para crear un simple CRUD" 
-2. Curso REACT-JS
-3. Profesor, Conrado Lanusse
-4. Alumno, Ramiro salerno
+Proyecto "E-commerce, utilizando firebase como db para crear un simple CRUD" 
+* Curso REACT-JS
+* Profesor, Conrado Lanusse
+* Alumno, Ramiro salerno
 
 Dependencias utilizadas:
 1. React
