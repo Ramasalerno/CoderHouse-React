@@ -5,6 +5,7 @@ import { db } from '../firebase/config'
 import { validarDatos } from '../helpers/vaidarDatos'
 import { collection, Timestamp, writeBatch, query, where, documentId, getDocs, addDoc } from 'firebase/firestore/lite'
 import Swal from 'sweetalert2'
+import './Checkout.css'
 
 export const Checkout = () => {
 
@@ -85,8 +86,8 @@ export const Checkout = () => {
             {carrito.length === 0 
                 ? <Navigate to="/"/>
                 :
-                    <div className="container my-5">
-                        <h2>Resumen de compra</h2>
+                    <div className="my-5 formulario">
+                        <h2>Coloque sus datos para finalizar la compra!</h2>
                         <hr/>
 
                         <form onSubmit={handleSubmit}>
@@ -94,46 +95,51 @@ export const Checkout = () => {
                                 onChange={handleInputChange}
                                 name="nombre"
                                 value={values.nombre}
-                                className="form-control my-2"
+                                className="textForm"
                                 type="text"
-                                placeholder="nombre"
+                                placeholder="Nombre"
+                                
                             />
-                            {values.nombre.length < 4 && <small>Nombre inválido</small>}
+                            {values.nombre.length < 4 && <small></small>}
 
                             <input
                                 onChange={handleInputChange}
                                 name="apellido"
                                 value={values.apellido}
-                                className="form-control my-2"
+                                className="textForm"
                                 type="text"
-                                placeholder="apellido"
+                                placeholder="Apellido"
                             />
-                            {values.apellido.length < 4 && <small>Apellido inválido</small>}
+                            {values.apellido.length < 4 && <small></small>}
 
                             <input
                                 onChange={handleInputChange}
                                 name="email"
                                 value={values.email}
-                                className="form-control my-2"
+                                className="textForm"
                                 type="email"
-                                placeholder="email"
+                                placeholder="E-mail"
+                                autoComplete='off'
                             />
-                            {values.email.length < 4 && <small>Email inválido</small>}
+                            {values.email.length < 4 && <small></small>}
 
                             <input
                                 onChange={handleInputChange}
                                 name="emailConfirm"
                                 value={values.emailConfirm}
-                                className="form-control my-2"
+                                className="textForm" 
                                 type="email"
-                                placeholder="Repita email"
+                                placeholder="Repita su e-mail"
+                                autoComplete='off'
                             />
-                            {values.emailConfirm !== values.email && <small>Email no coincide</small>}
+                            {values.emailConfirm !== values.email && <small></small>}
 
-                            <button type="submit" className="btn btn-primary">Enviar</button>
+                            <button type="submit" className="butn">Enviar</button>
                         </form>
                     </div>
             }
         </>
     )
 }
+
+/* {values.emailConfirm !== values.email && <small>Email no coincide</small>} */

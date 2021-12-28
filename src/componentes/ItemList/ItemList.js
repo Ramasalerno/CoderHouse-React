@@ -6,7 +6,7 @@ export const ItemList = ({items}) => {
 
     return (
         <Container className="my-5">
-            <h2 className="title1">Catalogo de productos</h2>
+            <h2 className="title1">Bienvenidos a MaginTech Store</h2>
             <hr/>
             <Row>
                 {items.map((prod) => <Item key={prod.id} {...prod}/>)}

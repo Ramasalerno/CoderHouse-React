@@ -8,6 +8,14 @@
     text-align: center;
 }
 
-.cuerpo h3 {
+#cuerpo h3 {
     color: rgb(243, 112, 210);
 }
+
+@media only screen and (max-width: 700px) {
+    #cuerpo {
+        padding: 10px;
+        width: 80%;
+    }
+}
+

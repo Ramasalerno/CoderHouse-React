@@ -25,11 +25,13 @@ const handleAgregar = () => {
         <div className="box1 ">
             <div>
                 <h2>{name}</h2>
-                <img src={img} alt={name}/>
+                <img src={img} alt={name} className='img'/>
                 <p>{desc}</p>
-                <span className="price">Precio: USD $ {price} + IVA</span>
+                <p className="price">Precio: USD $ {price} + IVA</p>
                 <p>Stock actual: {stock} unidades</p>
-                <Link to="/" className="btn btn-danger my-4">Volver al inicio</Link>
+                <div>
+                    <Link to="/" className="btn btn-danger boton">Volver al inicio</Link>
+                </div>
             </div>
                 
                 {

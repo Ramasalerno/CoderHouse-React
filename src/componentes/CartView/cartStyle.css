@@ -1,43 +1,47 @@
-.box1 {
+.box3 {
     background-color: rgba(61, 61, 61, 0.411);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    border-radius: 5%;
+    display: block;
+    width: 50%;
     padding: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
-    
+    margin-bottom: 5px;
 }
 
-.box1 img {
-    width: 50%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
-.box1 h2 {
+h2 {
     color: white;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
 }
 
-.box1 p {
+.box3 p {
     color: white;
     font-size: 1em;
     margin-top: 20px;
     text-align: center;
+    display: block;
 }
 
-.box1 .price {
+.box3 .price {
     color: yellow;
     font-size: 1.5em;
     text-align: center;
 }
 
-.boton {
+.but {
+    text-align: center;
     width: 100px; 
     margin-left: 50%;
     transform: translateX(-50%);
+}
+
+.box4 {
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.box4 p {
+    color: yellow;
+    font-size: 2em;
 }

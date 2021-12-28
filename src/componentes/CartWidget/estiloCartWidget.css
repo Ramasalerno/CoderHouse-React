@@ -1,7 +1,6 @@
 .carrito {
     font-size: 35px;
     color: white;
-    margin-left: 30px;
 }
 
 .ocultar {
@@ -12,4 +11,5 @@
 .numCount {
     color: white;
     font-size:20px;
+    margin-right: 15px;
 }

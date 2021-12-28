@@ -11,9 +11,9 @@ export const CartView = () => {
     if (carrito.length === 0) {
         return (
             <div className="container my-5">
-                <h2>No agregaste productos al carrito</h2>
+                <h2>No hay productos en el carrito</h2>
                 <hr/>
-                <Link to="/" className="btn btn-primary">Volver</Link>
+                <Link to="/" className="btn btn-primary">Explorar productos</Link>
             </div>
         )
     }
@@ -25,11 +25,12 @@ export const CartView = () => {
             <section>
                 {
                     carrito.map((prod) => <CartItem key={prod.id} {...prod}/>)
+                    
                 }
             </section>
             <hr/>
-            <div>
-                <p>Total: USD $ {totalCompra()}</p>
+            <div className='box4'>
+                <p>Total: USD $ {totalCompra()} + IVA</p>
                 <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
                 <Link to="/checkout" className="btn btn-success mx-2">Terminar mi compra</Link>
             </div> 
